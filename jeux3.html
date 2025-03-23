@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Vitesse de Saisie</title>
+</head>
+<body>
+    <h2>Test de Vitesse de Saisie</h2>
+    <p>Tapez le mot suivant :</p>
+    <h3 id="word">JavaScript</h3>
+    <input type="text" id="input">
+    <button onclick="checkTyping()">Vérifier</button>
+    <p id="feedback"></p>
+
+    <script>
+        function checkTyping() {
+            let input = document.getElementById("input").value;
+            let feedback = document.getElementById("feedback");
+
+            if (input === "JavaScript") {
+                feedback.innerText = "Bravo, vous avez bien tapé le mot ! 🎉";
+            } else {
+                feedback.innerText = "Oups, essayez encore...";
+            }
+        }
+    </script>
+</body>
+</html>

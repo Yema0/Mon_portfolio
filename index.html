@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mon Portfolio</title>
+</head>
+<body>
+    <header >
+        <nav>
+            <div class="logo">YEO <span>BÉNÉDICTE</span></div>
+            <div class="menu">
+                <a href="index.html"><span>Accueil</span></a>
+                <a href="A_propos.html">A_propos</a>
+                <a href="projet.html">projet</a>
+                <a href="competences.html">competences</a>
+                <a href="contacts.html">contacts</a>
+            </div>
+        </nav>
+        
+    </header>
+    <section id="accueil">
+        <div class="container">
+            <div class="text">
+                <h1>Je suis Yeo <span>Bénédicte</span>,</h1>
+                <p>Développeuse en devenir, passionnée par l'aéronautique et le développement web !</p>
+                <a href="project.html" class="btn hover-scale">Voir mes projets</a>
+            </div>
+            <div class="image">
+                <img src="3d-illustration-of-computer-programmer-coding-png.webp" alt="Développement web">
+            </div>
+        </div>
+    </section>
+
+    <section id="A_propos">
+        <div class="container-apropos">
+            <h2 class="titre-apropos hover-scale">A propos</h2>
+        <div class="content">
+            <div class="texte">
+                <h1>je m'appelle <span>YEO</span>, passionnée par la creation de site web moderne et interactif </h1>
+                <p>je suis actuellement etudiante en <span>développement web</span> , et je cherche a ameliorer mes competences en HTML ,CSS et JAVASCRIPT </p>
+                <p>j'adore transformer mes idees en projet concret et experimenter avec de nouvelle technologie</p>
+                <a href="CV_YEO_BENEDICTE.pdf" class="btn hover-scale">Telecharger Mon CV</a>
+            </div>
+            <div class="imge">
+                <img src="iyouuu.jpg" alt="image de moi">
+            </div>
+        </div>
+        </div>
+
+    </section>
+    <section id="projet">
+        <h2 class="titre-apropos hover-scale">Mes Projets</h2>
+        <div class="container-projet">
+            <div class="card">
+                <p>🎯jeux du click rapide : L'objectif est de cliquer sur un bouton qui apparaît aléatoirement sur l'écran. </p>
+                <p class="sous-text">#html, #css, #js</p>
+                <button class="butn hover-scale" onclick="loadGame('jeux1.html')">Voir</button>
+            </div>
+            <div class="card">
+                <p> 🎲Devinez le Nombre :L'utilisateur doit deviner un nombre entre 1 et 10.</p>
+                <p class="sous-text">#html, #css, #js</p>
+                <button class="butn hover-scale" onclick="loadGame('jeux2.html')">Voir</button>
+            </div>
+            <div class="card">
+                <p> ⌨️Test de Vitesse de Saisie : L'utilisateur doit taper un mot correctement aussi vite que possible</p>
+                <p class="sous-text">#html, #css, #js</p>
+                <button class="butn hover-scale" onclick="loadGame('jeux3.html')">Voir</button>
+            </div>
+        </div>
+        <iframe id="gameFrame" src=""></iframe>
+    </section>
+
+    <section id="competences">
+        <h2 class="title hover-scale">Mes Compétences</h2>
+        <div class="skills-container">
+            <div class="skills-box">
+                <h3>Soft Skills</h3>
+                <div class="skill">
+                    <span>Gestion de projet</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Résolution de problème</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Adaptabilité</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 55%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-box">
+                <h3>Hard Skills</h3>
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>VS Code</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 55%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    
+    <section id="contacts">
+        <div class="contacts">
+            <h1 class="hover-scale">Vous avez un <span>projet en tête</span> ?</h1>
+            <p>N'hésitez pas à me <span>contacter</span></p>
+        <form>
+            <div class="form-ligne">
+                <label for="prenom">Votre prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="champ">
+                <label for="nom">Votre nom</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>    
+            
+            <label for="sujet">Votre sujet</label>
+            <textarea rows="20" cols="300" id="sujet" name="sujet" required></textarea>
+            
+            <button class="hover-scale" type="submit">Envoyer</button>
+        </form>
+        </div>
+    </section>
+    
+</body>
+<script src="script.js"></script>
+<footer>
+    <p>Designed by <span>YEO</span> with HTML CSS & JS</p>
+    <p class="para">Tous droit reserver &copy;-2025</p>
+</footer>
+</html>

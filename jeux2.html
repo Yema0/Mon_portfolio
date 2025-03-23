@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devinez le Nombre</title>
+</head>
+<body>
+    <h2>Devinez le Nombre</h2>
+    <p>Choisissez un nombre entre 1 et 10.</p>
+    <input type="number" id="guess" min="1" max="10">
+    <button onclick="checkGuess()">Vérifier</button>
+    <p id="result"></p>
+
+    <script>
+        let correctNumber = Math.floor(Math.random() * 10) + 1;
+
+        function checkGuess() {
+            let guess = document.getElementById("guess").value;
+            let result = document.getElementById("result");
+
+            if (guess == correctNumber) {
+                result.innerText = "Bravo ! Vous avez trouvé le bon nombre 🎉";
+            } else {
+                result.innerText = "Raté ! Essayez encore.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Clic Rapide</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        #target { 
+            position: absolute; width: 50px; height: 50px; 
+            background-color: red; border-radius: 50%; 
+            cursor: pointer; display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Jeu du Clic Rapide</h2>
+    <p>Clique sur le cercle rouge le plus vite possible !</p>
+    <button onclick="startGame()">Démarrer</button>
+    <div id="target"></div>
+
+    <script>
+        let target = document.getElementById("target");
+        
+        function startGame() {
+            moveTarget();
+            target.style.display = "block";
+        }
+
+        function moveTarget() {
+            target.style.top = Math.random() * (window.innerHeight - 50) + "px";
+            target.style.left = Math.random() * (window.innerWidth - 50) + "px";
+        }
+
+        target.addEventListener("click", () => {
+            moveTarget();
+        });
+    </script>
+</body>
+</html>
