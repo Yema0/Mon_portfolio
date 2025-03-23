@@ -41,7 +41,7 @@
                 <h1>je m'appelle <span>YEO</span>, passionnée par la creation de site web moderne et interactif </h1>
                 <p>je suis actuellement etudiante en <span>développement web</span> , et je cherche a ameliorer mes competences en HTML ,CSS et JAVASCRIPT </p>
                 <p>j'adore transformer mes idees en projet concret et experimenter avec de nouvelle technologie</p>
-                <a href="CV_YEO_BENEDICTE.pdf" class="btn hover-scale">Telecharger Mon CV</a>
+                <a href="CV_YEO_BENEDICTE.pdf" target="_blank" class="btn hover-scale">Telecharger Mon CV</a>
             </div>
             <div class="imge">
                 <img src="iyouuu.jpg" alt="image de moi">
@@ -127,7 +127,7 @@
     </section>
     </section>
     
-    <section id="contacts">
+    <!--<section id="contacts">
         <div class="contacts">
             <h1 class="hover-scale">Vous avez un <span>projet en tête</span> ?</h1>
             <p>N'hésitez pas à me <span>contacter</span></p>
@@ -142,12 +142,40 @@
             </div>    
             
             <label for="sujet">Votre sujet</label>
-            <textarea rows="20" cols="300" id="sujet" name="sujet" required></textarea>
+            <textarea rows="15" cols="250" id="sujet" name="sujet" required></textarea>
             
             <button class="hover-scale" type="submit">Envoyer</button>
         </form>
         </div>
-    </section>
+    </section>-->
+    <section id="contact" class="contact">
+        <form action="" method="post" >
+            <div class="form-content">
+                <h2 class="hover-scale">Vous avez un <span>projet en tête ?</span> <br>N'hésitez pas à me <span>contacter</span> </h2>
+                <div class="form-input1">
+                    <div class="input-group">
+                        <label for="prenom">Votre prénom</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Ecrivez votre prénom" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="nom">Votre nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="Ecrivez votre nom" required>
+                    </div> 
+                </div>
+            </div>
+            
+                <div class="form-input2">
+                    <label for="sujet">Votre sujet</label>
+                    <input type="text" id="sujet" name="sujet" placeholder="Entrez votre sujet "required>
+                </div>
+                <div class="form-input3">
+                    <textarea name="message" id="message" cols="103" rows="20" placeholder="Saisissez votre  message"required></textarea>
+                </div>
+                <div class="form-button">
+                    <button class="hover-scale" type="submit">Envoyer</button>
+                </div>
+            </div>
+        </form>
     <!-- Bouton Retour en haut -->
 <button id="scrollToTopBtn" class="scroll-to-top-btn">↑</button>
 
