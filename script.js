@@ -10,58 +10,57 @@ function loadGame(gameUrl) {
         }
     }
 
-/* Animation de la navigation
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", function(event) {
-        event.preventDefault();
-        const targetId = this.getAttribute("href").substring(1);
-        document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+    document.addEventListener('DOMContentLoaded', function() {
+        // Récupérer tous les liens du menu
+        const menuLinks = document.querySelectorAll('nav .menu a');
+    
+        // Ajouter un événement pour chaque lien
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Empêcher le comportement de lien par défaut
+    
+                // Cibler l'élément lié
+                const targetId = link.getAttribute('href').substring(1); // Récupérer l'ID de la cible
+                const targetElement = document.getElementById(targetId);
+    
+                // Définir la position de défilement
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    
+        // Amélioration : ajouter un effet de transition sur le menu au survol
+        menuLinks.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.backgroundColor = '#575757';
+            });
+            link.addEventListener('mouseout', () => {
+                link.style.backgroundColor = '';
+            });
+        });
     });
-});
-// Formulaire de contact
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    document.getElementById("form-message").style.display = "block";
-    this.reset();
-    setTimeout(() => {
-        document.getElementById("form-message").style.display = "none";
-    }, 3000);
-});
-
-// Bouton retour en haut
-const backToTop = document.getElementById("back-to-top");
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-        backToTop.style.display = "block";
-    } else {
-        backToTop.style.display = "none";
-    }
-});
-
-backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// Effet d'apparition progressive
-const fadeInElements = document.querySelectorAll(".fade-in");
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
+    document.addEventListener('DOMContentLoaded', function() {
+        // Récupérer le bouton
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+        // Fonction pour afficher/masquer le bouton selon la position du défilement
+        window.addEventListener('scroll', function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.classList.add('show'); // Afficher le bouton
+            } else {
+                scrollToTopBtn.classList.remove('show'); // Cacher le bouton
+            }
+        });
+    
+        // Ajouter un événement au clic sur le bouton
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Effet de défilement fluide vers le haut
+            });
+        });
     });
-}, { threshold: 0.3 });
 
-fadeInElements.forEach(element => {
-    observer.observe(element);
-});
-
-// Changement de couleur de fond en fonction de l'heure
-const hour = new Date().getHours();
-if (hour >= 18 || hour < 6) {
-    document.body.style.backgroundColor = "#2c3e50";
-    document.body.style.color = "white";
-} else {
-    document.body.style.backgroundColor = "#ecf0f1";
-    document.body.style.color = "black";
-}*/
+        
