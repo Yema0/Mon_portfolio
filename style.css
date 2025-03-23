@@ -495,7 +495,7 @@ form h2{
     text-align: center;
 }
 
-#contact h2 span{
+ .form-content h2 span{
     color: #EC4899;
 }
 .form-content{
